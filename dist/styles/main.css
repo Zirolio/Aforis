@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+:root {
+    --background-color: hsl(0, 0%, 0%);
+    --startBtnColor: rgb(20, 120, 226);
+    --rangeBackground: linear-gradient(to right, #007bff 0%, #007bff 100%);
+    --sliderBackground: radial-gradient(#007bff, rgb(15, 148, 148));
+    --sliderBorderColor: rgb(11, 175, 175);
+    --startBtnShadowColor: var(--startBtnColor);
+    --hoveredStartBtnColor: #0056b3;
+    --hoveredStartBtnShadowColor: #0056b3;
+    --playerParamsBg: #333;
+    --playerParamsBorder: #555;
+    --labelColor: #008cff;
+    --colorChoiceBg: linear-gradient(to right, #4e4e4e 0%, #4e4e4e 100%);
+    --paramTextColor: hsl(0, 100%, 50%);
+    --resumeBtn: hsl(0, 100%, 43%);
+    --resumeBtnHover: hsl(0, 100%, 50%);
+}
+
+body {
+    background-color: var(--background-color);
+    width: 100%;
+    /* z-index: -2; */
+}
+
+canvas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* z-index: -1; */
+}
+
+.def {}
+
+input[type="range"] {
+    height: 5px;
+    margin: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--rangeBackground);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #007bff;
+    transform: translate(0, 25%);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--sliderBackground);
+    border: 2px solid var(--sliderBorderColor);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.7), 0 0 20px rgba(0, 123, 255, 0.5);
+}
+input[type="range"]:disabled {
+    background: gray;
+    box-shadow: 0 0 10px gray;
+    cursor: default;
+}
+input[type="range"]:disabled::-webkit-slider-thumb {
+    background: gray;
+    border: 2px solid #888;
+    box-shadow: 0 0 10px gray;
+    cursor: default;
+}
+
+
+
+.startBtn {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 150px;
+    height: 38px;
+    background-color: var(--startBtnColor);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 0 0 10px var(--startBtnShadowColor);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px var(--startBtnShadowColor), 0 0 20px var(--startBtnShadowColor);
+}
+.startBtn:hover {
+    background-color: var(--hoveredStartBtnColor);
+    box-shadow: 0 0 20px var(--hoveredStartBtnShadowColor), 0 0 30px var(--hoveredStartBtnShadowColor);
+}
+
+.playerParams {
+    position: absolute;
+    left: 50%;
+    top: 58%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    background-color: var(--playerParamsBg);
+    border: 1px solid var(--playerParamsBorder);
+    text-align: center;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    display: inline-block;
+    box-shadow: 0 0 20px #7e7e7e;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: var(--labelColor);
+}
+
+.Param {
+    color: var(--paramTextColor);
+    font-size: 30px;
+    user-select: none;
+    text-shadow: 0 0 10px var(--paramTextColor);
+    margin-bottom: 30px;
+}
+
+.colorChoiceContainer {
+    padding: 3px;
+    margin: 3px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.costumColorChoineL {
+    color: var(--labelColor);
+    background: var(--colorChoiceBg);
+    cursor: default;
+    user-select: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 23px;
+    min-width: 25px;
+}
+
+
+input[type="radio"] {
+    display: none;
+}
+
+.neon-label {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #3a3a3a00;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.neon-label:hover {
+    background-color: var(--hoveredStartBtnColor);
+    box-shadow: 0 0 20px var(--hoveredStartBtnShadowColor), 0 0 30px var(--hoveredStartBtnShadowColor);
+}
+
+.checked-neon-label {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    background-color: #007400;
+    box-shadow: 0 0 20px #007400, 0 0 30px #007400;
+}
+
+.scoreC {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: beige;
+}
+
+.scoreC {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: beige;
+}
+.scoreCD {
+    top: 10px;
+    left: 20px;
+    font-size: 40px;
+    margin: 7px;
+    margin-bottom: 26px;
+    color: beige;
+}
+
+
+.dContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    background-color: var(--playerParamsBg);
+    border: 1px solid var(--playerParamsBorder);
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    display: inline-block;
+    box-shadow: 0 0 20px #7e7e7e;
+}
+.resumeBtn {
+    width: 150px;
+    height: 38px;
+    background-color: var(--resumeBtn); /* Красный цвет */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 0 0 10px var(--resumeBtn); /* Красный неоновый эффект */
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px var(--resumeBtn), 0 0 20px var(--resumeBtn);
+}
+.resumeBtn:hover {
+    background-color: var(--resumeBtnHover); /* Цвет при наведении (красный) */
+    box-shadow: 0 0 20px var(--resumeBtnHover), 0 0 30px var(--resumeBtnHover); /* Эффект при наведении (красный неон) */
+}

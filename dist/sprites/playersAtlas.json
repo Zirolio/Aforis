@@ -1,0 +1,28 @@
+{
+    "frames": [
+        {
+            "filename": "whitePlayer",
+            "frame": {"x": 0, "y": 0, "w": 51, "h": 51},
+            "rotated": false,
+            "trimmed": false
+        },
+        {
+            "filename": "whiteTrail1",
+            "frame": {"x": 0, "y": 0, "w": 51, "h": 51},
+            "rotated": false,
+            "trimmed": false
+        },
+        {
+            "filename": "whiteTrail2",
+            "frame": {"x": 52, "y": 0, "w": 49, "h": 49},
+            "rotated": false,
+            "trimmed": false
+        },
+        {
+            "filename": "whiteTrail3",
+            "frame": {"x": 102, "y": 0, "w": 19, "h": 19},
+            "rotated": false,
+            "trimmed": false
+        }
+    ]
+}
