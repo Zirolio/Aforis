@@ -28,6 +28,11 @@ body {
     /* z-index: -2; */
 }
 
+br {
+    pointer-events: none;
+    user-select: none;
+}
+
 canvas {
     position: absolute;
     left: 50%;
@@ -78,8 +83,8 @@ input[type="range"]:disabled::-webkit-slider-thumb {
 
 .startBtn {
     position: absolute;
-    bottom: 12px;
-    right: 12px;
+    bottom: 22px;
+    right: 22px;
     width: 150px;
     height: 38px;
     background-color: var(--startBtnColor);
@@ -93,6 +98,7 @@ input[type="range"]:disabled::-webkit-slider-thumb {
     text-shadow: 0 0 10px var(--startBtnShadowColor);
     transition: background-color 0.3s, box-shadow 0.3s;
     box-shadow: 0 0 10px var(--startBtnShadowColor), 0 0 20px var(--startBtnShadowColor);
+    user-select: none;
 }
 .startBtn:hover {
     background-color: var(--hoveredStartBtnColor);
@@ -169,6 +175,7 @@ input[type="radio"] {
     text-align: center;
     font-weight: bold;
     transition: background-color 0.3s, box-shadow 0.3s;
+    user-select: none;
 }
 .neon-label:hover {
     background-color: var(--hoveredStartBtnColor);
@@ -186,6 +193,7 @@ input[type="radio"] {
     transition: background-color 0.3s, box-shadow 0.3s;
     background-color: #007400;
     box-shadow: 0 0 20px #007400, 0 0 30px #007400;
+    user-select: none;
 }
 
 .scoreC {
@@ -193,13 +201,17 @@ input[type="radio"] {
     top: 10px;
     left: 20px;
     color: beige;
+    user-select: none;
 }
 
 .scoreC {
     position: absolute;
-    top: 10px;
+    top: 20px;
     left: 20px;
+    font-size: 18px;
+    font-weight: bold;
     color: beige;
+    user-select: none;
 }
 .scoreCD {
     top: 10px;
@@ -224,6 +236,7 @@ input[type="radio"] {
     padding: 10px;
     display: inline-block;
     box-shadow: 0 0 20px #7e7e7e;
+    user-select: none;
 }
 .resumeBtn {
     width: 150px;
@@ -239,6 +252,8 @@ input[type="radio"] {
     text-shadow: 0 0 10px var(--resumeBtn); /* Красный неоновый эффект */
     transition: background-color 0.3s, box-shadow 0.3s;
     box-shadow: 0 0 10px var(--resumeBtn), 0 0 20px var(--resumeBtn);
+    user-select: none;
+    margin-bottom: 15px;
 }
 .resumeBtn:hover {
     background-color: var(--resumeBtnHover); /* Цвет при наведении (красный) */
