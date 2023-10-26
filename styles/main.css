@@ -213,10 +213,27 @@ input[type="radio"] {
     color: beige;
     user-select: none;
 }
+.waweC {
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    font-size: 16px;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: beige;
+    user-select: none;
+}
 .scoreCD {
     top: 10px;
     left: 20px;
     font-size: 40px;
+    margin: 7px;
+    color: beige;
+}
+.waweCD {
+    top: 10px;
+    left: 20px;
+    font-size: 18px;
     margin: 7px;
     margin-bottom: 26px;
     color: beige;

@@ -1,0 +1,22 @@
+{
+    "frames": [
+        {
+            "filename": "bascground",
+            "frame": {"x": 0, "y": 0, "w": 309, "h": 25},
+            "rotated": false,
+            "trimmed": false
+        },
+        {
+            "filename": "maxCounter",
+            "frame": {"x": 0, "y": 26, "w": 312, "h": 25},
+            "rotated": false,
+            "trimmed": false
+        },
+        {
+            "filename": "Counter",
+            "frame": {"x": 1, "y": 51, "w": 25, "h": 25},
+            "rotated": false,
+            "trimmed": false
+        }
+    ]
+}
